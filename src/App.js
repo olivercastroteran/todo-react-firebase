@@ -29,10 +29,10 @@ function App() {
         </FormControl>
 
         <Button
+          color="primary"
           disabled={!input}
           type="submit"
           variant="contained"
-          color="primary"
         >
           Add Todo
         </Button>
