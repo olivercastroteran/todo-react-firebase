@@ -17,7 +17,12 @@ function App() {
       .orderBy('timestamp', 'desc')
       .onSnapshot((snapshot) => {
         //console.log(snapshot.docs.map((doc) => doc.data()));
-        setTodos(snapshot.docs.map((doc) => doc.data().todo));
+        setTodos(
+          snapshot.docs.map((doc) => ({
+            todo: doc.data().todo,
+            id: doc.id,
+          }))
+        );
       });
   }, []);
 
@@ -54,7 +59,7 @@ function App() {
 
       <ul>
         {todos.map((todo) => (
-          <Todo key={Math.random()} text={todo} />
+          <Todo key={Math.random()} todo={todo} />
         ))}
       </ul>
     </div>
