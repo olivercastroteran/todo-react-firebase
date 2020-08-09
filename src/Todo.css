@@ -6,15 +6,8 @@
   margin: 0 auto;
 }
 
-.delete-btn:hover {
+.delete-btn:hover,
+.edit-btn:hover {
   cursor: pointer;
   transform: scale(1.035);
-}
-
-.mpdal {
-  background-color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
